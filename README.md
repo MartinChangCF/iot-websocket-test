@@ -19,7 +19,7 @@
     - On the server-side, cd into the `/root/test` folder and run `node server.js` to start the service.
     - On the client-side,
        1. Get into the docker container by ``
-       2. Run `node ~/test/client.js`
+       2. Run `node /opt/app-root/src/test/client.js`
        3. Use `iptables` to simulate the bad network status of a device.
          - Create a filter `iptables -A OUTPUT -o eth0 -m statistic --mode random --probability 0.90 -j DROP`
          - Delete a filter `iptables -D OUTPUT -o eth0 -m statistic --mode random --probability 0.90 -j DROP`
